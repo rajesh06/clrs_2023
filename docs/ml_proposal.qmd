@@ -1,0 +1,81 @@
+---
+title: "Untitled"
+format: docx
+editor: visual
+---
+
+# A Hands-On Introduction to Building a Bayesian MCMC Model
+
+## Description
+
+This workshop is for actuaries who may have some interest in using Bayesian MCMC modeling to solve reserving problems but do not know quite where to begin. The goal of the workshop is to help actuaries who are in that group get over that hurdle by working through some examples.
+
+Each attendee will be given an Rmarkdown file that will form the basis for a series of structured exercises. Those exercises will include executing R programs that have been inserted into an Rmarkdown file before the class starts, talking about what the programs are doing and then copying and making minor changes to the initial R programs to get some limited hands-on exposure to building Bayesian MCMC models. There will be comments included in the Rmarkdown file to explain what the R code examples are doing, although this course is not designed to teach someone how to program in R.
+
+The workshop will use open-source software in the RStudio environment. The open-source software used during the workshop will include brms (a macro writer that calls Stan) along with packages like tidybayes or ShinyStan that help simplify the coding involved in the modeling effort. Stan is the software that does the Bayesian MCMC modeling. The workshop modeling work for each attendee can be saved on the attendee's laptop to take home as a working set of examples.
+
+Attendees who participate in the workshop will need to bring a laptop loaded with the software required to run the examples. A complete list of the software required to run the examples in the workshop will be furnished prior to registration along with a file that can be downloaded and used to verify that the candidate's laptop will be able to run the examples in class. Please note that the Stan program used as the engine to do the Bayesian MCMC modeling work will need to be loaded outside of the RStudio environment as will the Rtools package that is required to make it possible to call Stan from the RStudio environment.
+
+We will not cover the theory behind Bayesian MCMC during the workshop, but there will be a few brief comments relating how this technique works to actuarial credibility concepts and regression. We hope to give the actuaries that attend incentive to learn more about this technique through the hands-on experience of walking through examples of its application to reserving problems.
+
+## Abstract
+
+We will create simulated loss triangles with different behavior characteristics to give attendees a sense of how one could adapt the Bayesian MCMC framework to different lines of business or business situations. One byproduct of simulating the loss triangles within the workshop is that attendees can see how one can test one's understanding of a modeling tool by comparing the model's resulting forecast to the loss triangles extended into the future via simulation.
+
+We will not have time to give extensive instruction on how to use packages like brms, ggplot2 or tidybayes, but we will make use of the windows feature in RStudio to show how to access documentation on the packages we use and compare that documentation to the use of packages within the R programs. Our intent is to demonstrate the type of self-learning often needed to make progress on a project by trying out a package then looking at the documentation to understand how to correct problems.
+
+-   The general sequence for each exercise will be:
+
+-   Review the assumptions built into the simulation program.
+
+-   Run the simulation program.
+
+-   Demonstrate the use of packages like ggplot2 or ggdist to do exploratory data analysis.
+
+-   Link the graph results to the modeling instructions in the brms code example.
+
+-   Execute the brms package and talk about some of the summary diagnostics.
+
+-   Execute packages like bayesplot or ShinyStan to evaluate how well the modeling machinery ran.
+
+-   Give some comments on how to interpret the diagnostics.
+
+-   Create a forecast (indicated reserve distribution) using the model coupled with features of tidybayes.
+
+There will be three examples in the workshop to show the application of Bayesian MCMC to building a stochastic reserve model:
+
+-   A short-tailed line with no changes underwriting, claim handling or inflation as an introduction.
+
+-   A long-tailed line with no changes in underwriting or claim handling, but inflation and loss costs are changing.
+
+-   A long-tailed line with changes in underwriting and claim handling, but steady inflation and loss cost behavior.
+
+We will use the short-tailed line to introduce the software packages. The other examples are included to give the workshop participants insight into how Bayesian MCMC could help them in their work when life becomes complicated.
+
+## Technical Level of Presentation Material 
+
+This session will not go into the theory underlying the Bayesian MCMC approach. The focus is on giving participants exposure to the software that is currently available that makes using Bayesian MCMC practical today. There will be a bibliography furnished at the time of registration with suggested reading material to provide candidates with some background on the underlying theory.
+
+We will assume that all attendees understand the reserving material on Exam 5. The Exam 5 prerequisite means we will assume they understand the general reserving problem and that we can use terms like accident year, development year and incremental paid losses without taking time during the workshop to explain those terms.
+
+This session will assume that participants have some exposure to using RStudio to run packages in R, but the working assumption is that participants either have no experience with building Bayesian MCMC models or have tried and were unsuccessful. If an actuary has no experience in using RStudio, R or the tidyverse packages in R and still wants to attend, going through the RStudio tutorials plus Hadley Wickham's book R for Data Science is highly recommended.
+
+## Interactive Features of Presentation 
+
+We will walk around the room and help people when they run into problems running the programs. We will answer questions as they come up as the attendees execute a package and ask how the package instructions relate to the output they see.
+
+## Goals for Session 
+
+The attendee should leave with the following:
+
+-   A Rmarkdown file containing working examples of the application of Bayesian MCMC to stochastic reserving.
+
+-   Examples of supporting software to make modeling with Bayesian MCMC practical in their take home Rmarkdown file.
+
+-   The hands-on experience of altering instructions in a given package related to Bayesian MCMC modeling and seeing how the results change.
+
+-   The experience of looking at online documentation to find the right command to alter an open-source package like brms or tidybayes.
+
+-   Exposure to using ShinyStan as a platform to validate the integrity of the model output.
+
+-   List of source material on Bayesian MCMC modeling at various levels as well as a list of packages used to do the modeling with links to source material on those packages.
